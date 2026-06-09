@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>কোর্স তালিকা — Islamic LMS Demo</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="brand">🕌 Islamic LMS Demo</div>
+  <a href="index.html">হোমপেজ</a>
+  <a href="courses.html" class="active">কোর্স তালিকা</a>
+  <a href="course-detail.html">কোর্স বিবরণ</a>
+  <a href="lesson-player.html">লেসন প্লেয়ার</a>
+  <a href="student-dashboard.html">স্টুডেন্ট ড্যাশ</a>
+  <a href="payment.html">পেমেন্ট</a>
+  <a href="certificate.html">সার্টিফিকেট</a>
+  <a href="admin-dashboard.html">অ্যাডমিন ড্যাশ</a>
+  <a href="admin-payments.html">পেমেন্ট ভেরিফাই</a>
+  <a href="theme-customizer.html">থিম কাস্টমাইজার</a>
+  <a href="homepage-builder.html">হোমপেজ বিল্ডার</a>
+</nav>
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+    <div class="url-bar">https://madrasa-nooruislam.com/courses</div>
+  </div>
+  <div class="site-nav" style="height:50px">
+    <div class="nav-brand"><div class="nav-logo">ন</div><div class="nav-name" style="font-size:13px">মাদ্রাসা নূরুল ইসলাম</div></div>
+    <div class="nav-links"><a href="courses.html">কোর্সসমূহ</a><a href="#">শিক্ষকবৃন্দ</a></div>
+    <div class="nav-btns"><a href="#" class="btn btn-outline btn-sm">লগইন</a><a href="#" class="btn btn-white btn-sm">নিবন্ধন</a></div>
+  </div>
+  <!-- Filter bar -->
+  <div style="background:var(--gp);padding:16px 28px;border-bottom:.5px solid var(--border)">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <input type="text" placeholder="🔍  কোর্স খুঁজুন..." style="max-width:260px">
+      <select style="width:145px"><option>সব ক্যাটাগরি</option><option>তাজউইদ</option><option>আরবি ভাষা</option><option>কোরআন</option></select>
+      <select style="width:130px"><option>সব স্তর</option><option>প্রাথমিক</option><option>মধ্যবর্তী</option><option>উন্নত</option></select>
+      <select style="width:130px"><option>মূল্য: সব</option><option>বিনামূল্যে</option><option>পেইড</option></select>
+      <div style="margin-left:auto;font-size:12.5px;color:var(--muted)">৪৮টি কোর্স পাওয়া গেছে</div>
+    </div>
+  </div>
+  <div style="display:flex;min-height:500px">
+    <!-- Sidebar -->
+    <div style="width:200px;border-right:.5px solid var(--border);padding:18px;background:#fff;flex-shrink:0">
+      <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:9px">ক্যাটাগরি</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="checkbox" checked style="accent-color:var(--green)"><span style="font-size:12.5px">কোরআন (১২)</span></div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="checkbox" checked style="accent-color:var(--green)"><span style="font-size:12.5px">তাজউইদ (৮)</span></div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="checkbox" style="accent-color:var(--green)"><span style="font-size:12.5px">আরবি ভাষা (১৫)</span></div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="checkbox" style="accent-color:var(--green)"><span style="font-size:12.5px">হিফজ (৪)</span></div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="checkbox" style="accent-color:var(--green)"><span style="font-size:12.5px">ফিকহ (৬)</span></div>
+      <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin:16px 0 9px">স্তর</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="radio" name="level" style="accent-color:var(--green)"><span style="font-size:12.5px">প্রাথমিক (১৬)</span></div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="radio" name="level" style="accent-color:var(--green)"><span style="font-size:12.5px">মধ্যবর্তী (১৮)</span></div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="radio" name="level" style="accent-color:var(--green)"><span style="font-size:12.5px">উন্নত (৪)</span></div>
+      <div style="font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin:16px 0 9px">মূল্য</div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="checkbox" checked style="accent-color:var(--green)"><span style="font-size:12.5px">বিনামূল্যে (৮)</span></div>
+      <div style="display:flex;align-items:center;gap:7px;padding:4px 0;cursor:pointer"><input type="checkbox" checked style="accent-color:var(--green)"><span style="font-size:12.5px">পেইড (৪০)</span></div>
+    </div>
+    <!-- Grid -->
+    <div style="flex:1;padding:20px;background:var(--bg)">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+        <div style="display:flex;gap:7px">
+          <span class="badge badge-green">তাজউইদ ✕</span>
+          <span class="badge badge-green">কোরআন ✕</span>
+          <span style="font-size:12px;color:var(--muted);cursor:pointer;align-self:center">সব পরিষ্কার</span>
+        </div>
+        <select style="width:160px;font-size:12px"><option>সর্বাধিক জনপ্রিয়</option><option>সর্বশেষ যুক্ত</option><option>মূল্য: কম থেকে বেশি</option></select>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+        <div class="course-card"><div class="ct ct-green" style="height:100px">📖</div><div style="padding:10px"><div style="font-size:12.5px;font-weight:700;margin-bottom:4px">তাজউইদ মাস্টারক্লাস</div><div style="font-size:11px;color:var(--muted);margin-bottom:7px">📚 ৪৫ পাঠ • শায়েখ আব্দুর রহমান</div><div style="display:flex;justify-content:space-between;align-items:center;padding-top:7px;border-top:.5px solid var(--border)"><span style="font-size:14px;font-weight:700;color:var(--green)">৳৯৯৯</span><a href="course-detail.html" class="btn btn-primary btn-sm">বিবরণ</a></div></div></div>
+        <div class="course-card"><div class="ct ct-gold" style="height:100px">📖</div><div style="padding:10px"><div style="font-size:12.5px;font-weight:700;margin-bottom:4px">কথ্য আরবি বেসিক</div><div style="font-size:11px;color:var(--muted);margin-bottom:7px">📚 ৩২ পাঠ • উস্তায মুহাম্মদ আলী</div><div style="display:flex;justify-content:space-between;align-items:center;padding-top:7px;border-top:.5px solid var(--border)"><span style="font-size:14px;font-weight:700;color:var(--green)">৳৭৯৯</span><a href="course-detail.html" class="btn btn-primary btn-sm">বিবরণ</a></div></div></div>
+        <div class="course-card"><div class="ct ct-blue" style="height:100px">📖</div><div style="padding:10px"><div style="font-size:12.5px;font-weight:700;margin-bottom:4px">শিশুদের কোরআন</div><div style="font-size:11px;color:var(--muted);margin-bottom:7px">📚 ২৪ পাঠ • শায়েখ ইউসুফ</div><div style="display:flex;justify-content:space-between;align-items:center;padding-top:7px;border-top:.5px solid var(--border)"><span style="font-size:14px;font-weight:700;color:var(--green)">বিনামূল্যে</span><a href="course-detail.html" class="btn btn-primary btn-sm">বিবরণ</a></div></div></div>
+        <div class="course-card"><div class="ct ct-teal" style="height:100px">📖</div><div style="padding:10px"><div style="font-size:12.5px;font-weight:700;margin-bottom:4px">ফিকহ পরিচিতি</div><div style="font-size:11px;color:var(--muted);margin-bottom:7px">📚 ৩৬ পাঠ • মুফতি আব্দুল হাই</div><div style="display:flex;justify-content:space-between;align-items:center;padding-top:7px;border-top:.5px solid var(--border)"><span style="font-size:14px;font-weight:700;color:var(--green)">৳৮৪৯</span><a href="course-detail.html" class="btn btn-primary btn-sm">বিবরণ</a></div></div></div>
+        <div class="course-card"><div class="ct ct-green" style="height:100px">📖</div><div style="padding:10px"><div style="font-size:12.5px;font-weight:700;margin-bottom:4px">আরবি ব্যাকরণ</div><div style="font-size:11px;color:var(--muted);margin-bottom:7px">📚 ২৮ পাঠ • উস্তায ইব্রাহীম</div><div style="display:flex;justify-content:space-between;align-items:center;padding-top:7px;border-top:.5px solid var(--border)"><span style="font-size:14px;font-weight:700;color:var(--green)">৳৬৯৯</span><a href="course-detail.html" class="btn btn-primary btn-sm">বিবরণ</a></div></div></div>
+        <div class="course-card"><div class="ct ct-gold" style="height:100px">📖</div><div style="padding:10px"><div style="font-size:12.5px;font-weight:700;margin-bottom:4px">হাদিস শিক্ষা</div><div style="font-size:11px;color:var(--muted);margin-bottom:7px">📚 ৪০ পাঠ • মুফতি সালেহ</div><div style="display:flex;justify-content:space-between;align-items:center;padding-top:7px;border-top:.5px solid var(--border)"><span style="font-size:14px;font-weight:700;color:var(--green)">৳৯৪৯</span><a href="course-detail.html" class="btn btn-primary btn-sm">বিবরণ</a></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

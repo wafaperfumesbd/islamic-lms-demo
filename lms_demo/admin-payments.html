@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>পেমেন্ট ভেরিফাই — Islamic LMS Demo</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="brand">🕌 Islamic LMS Demo</div>
+  <a href="index.html">হোমপেজ</a><a href="courses.html">কোর্স তালিকা</a>
+  <a href="course-detail.html">কোর্স বিবরণ</a><a href="lesson-player.html">লেসন প্লেয়ার</a>
+  <a href="student-dashboard.html">স্টুডেন্ট ড্যাশ</a><a href="payment.html">পেমেন্ট</a>
+  <a href="certificate.html">সার্টিফিকেট</a><a href="admin-dashboard.html">অ্যাডমিন ড্যাশ</a>
+  <a href="admin-payments.html" class="active">পেমেন্ট ভেরিফাই</a>
+  <a href="theme-customizer.html">থিম কাস্টমাইজার</a><a href="homepage-builder.html">হোমপেজ বিল্ডার</a>
+</nav>
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+    <div class="url-bar">https://madrasa-nooruislam.com/admin/payments</div>
+  </div>
+  <div class="admin-wrap">
+    <div class="admin-sidebar">
+      <div class="sb-brand"><div class="sb-brand-name">🕌 Admin Panel</div></div>
+      <a href="admin-dashboard.html" class="sb-link"><span>📊</span> ড্যাশবোর্ড</a>
+      <a href="courses.html" class="sb-link"><span>📚</span> কোর্সসমূহ</a>
+      <a href="admin-payments.html" class="sb-link active"><span>💳</span> পেমেন্ট <span class="sb-badge">৩</span></a>
+      <a href="theme-customizer.html" class="sb-link"><span>🎨</span> থিম</a>
+      <a href="homepage-builder.html" class="sb-link"><span>🏠</span> হোমপেজ</a>
+    </div>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div style="font-size:13.5px;font-weight:600">পেমেন্ট যাচাই</div>
+        <span class="badge badge-gold">৩টি অপেক্ষমাণ</span>
+      </div>
+      <div class="admin-content">
+        <div class="grid-2" style="gap:16px;align-items:start">
+          <!-- Payment list -->
+          <div>
+            <div style="font-size:12.5px;font-weight:700;margin-bottom:10px;color:var(--muted)">অপেক্ষমাণ পেমেন্ট</div>
+            <div style="display:flex;flex-direction:column;gap:10px" id="payment-list">
+              <div class="pay-item selected" onclick="selectPayment(this,'রাহেলা বেগম','তাজউইদ মাস্টারক্লাস','bKash','৳৯৯৯','TrxA3F7K2','01812-345678')">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px">
+                  <div><div style="font-size:13.5px;font-weight:700">রাহেলা বেগম</div><div style="font-size:11px;color:var(--muted)">তাজউইদ মাস্টারক্লাস</div></div>
+                  <div style="text-align:right"><div style="font-size:15px;font-weight:800;color:var(--green)">৳৯৯৯</div><span style="background:#FFF0F5;color:#E91E8C;font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px">bKash</span></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted)"><span>TrxID: <strong style="font-family:'DM Mono',monospace">TrxA3F7K2</strong></span><span>১৫ মিনিট আগে</span></div>
+              </div>
+              <div class="pay-item" onclick="selectPayment(this,'ইমাম হোসেন','কথ্য আরবি বেসিক','Nagad','৳৭৯৯','NGD8X2K9','01912-345678')">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px">
+                  <div><div style="font-size:13.5px;font-weight:700">ইমাম হোসেন</div><div style="font-size:11px;color:var(--muted)">কথ্য আরবি বেসিক</div></div>
+                  <div style="text-align:right"><div style="font-size:15px;font-weight:800;color:var(--green)">৳৭৯৯</div><span style="background:#E8F5E9;color:#2E7D32;font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px">Nagad</span></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted)"><span>TrxID: <strong style="font-family:'DM Mono',monospace">NGD8X2K9</strong></span><span>৪৫ মিনিট আগে</span></div>
+              </div>
+              <div class="pay-item" onclick="selectPayment(this,'ফাতেমা বিনতে আলী','ফিকহ পরিচিতি','bKash','৳৮৪৯','TrxC2P9N3','01812-345678')">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px">
+                  <div><div style="font-size:13.5px;font-weight:700">ফাতেমা বিনতে আলী</div><div style="font-size:11px;color:var(--muted)">ফিকহ পরিচিতি</div></div>
+                  <div style="text-align:right"><div style="font-size:15px;font-weight:800;color:var(--green)">৳৮৪৯</div><span style="background:#FFF0F5;color:#E91E8C;font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px">bKash</span></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted)"><span>TrxID: <strong style="font-family:'DM Mono',monospace">TrxC2P9N3</strong></span><span>২ ঘণ্টা আগে</span></div>
+              </div>
+            </div>
+          </div>
+          <!-- Detail panel -->
+          <div class="card" id="detail-panel">
+            <div class="card-body">
+              <div style="font-size:13.5px;font-weight:700;margin-bottom:14px">পেমেন্ট বিবরণ</div>
+              <div style="background:var(--gp);border-radius:8px;padding:13px;margin-bottom:14px">
+                <div id="d-student" style="display:flex;justify-content:space-between;font-size:12.5px;padding:4px 0;border-bottom:.5px solid rgba(0,0,0,.05)"><span style="color:var(--muted)">শিক্ষার্থী:</span><span style="font-weight:600">রাহেলা বেগম</span></div>
+                <div id="d-course" style="display:flex;justify-content:space-between;font-size:12.5px;padding:4px 0;border-bottom:.5px solid rgba(0,0,0,.05)"><span style="color:var(--muted)">কোর্স:</span><span style="font-weight:600">তাজউইদ মাস্টারক্লাস</span></div>
+                <div id="d-method" style="display:flex;justify-content:space-between;font-size:12.5px;padding:4px 0;border-bottom:.5px solid rgba(0,0,0,.05)"><span style="color:var(--muted)">পদ্ধতি:</span><span style="font-weight:600">bKash</span></div>
+                <div id="d-amount" style="display:flex;justify-content:space-between;font-size:12.5px;padding:4px 0;border-bottom:.5px solid rgba(0,0,0,.05)"><span style="color:var(--muted)">পরিমাণ:</span><span style="font-weight:700;color:var(--green)">৳৯৯৯</span></div>
+                <div id="d-txid" style="display:flex;justify-content:space-between;font-size:12.5px;padding:4px 0;border-bottom:.5px solid rgba(0,0,0,.05)"><span style="color:var(--muted)">TrxID:</span><span style="font-weight:700;font-family:'DM Mono',monospace">TrxA3F7K2</span></div>
+                <div id="d-merchant" style="display:flex;justify-content:space-between;font-size:12.5px;padding:4px 0"><span style="color:var(--muted)">মার্চেন্ট নং:</span><span style="font-family:'DM Mono',monospace">01812-345678</span></div>
+              </div>
+              <div style="margin-bottom:12px">
+                <label>প্রত্যাখ্যানের কারণ (প্রযোজ্য হলে)</label>
+                <textarea id="reject-reason" placeholder="ভুল TrxID / পরিমাণ মেলেনি..." style="min-height:60px"></textarea>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                <button onclick="approvePayment()" class="btn btn-primary" style="justify-content:center;padding:11px">✓ অনুমোদন করুন</button>
+                <button onclick="rejectPayment()" class="btn btn-danger" style="justify-content:center;padding:11px">✕ প্রত্যাখ্যান করুন</button>
+              </div>
+              <div style="font-size:11px;color:var(--muted);text-align:center;margin-top:8px">অনুমোদনের পর শিক্ষার্থীকে স্বয়ংক্রিয়ভাবে email যাবে।</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.pay-item{padding:13px;border-radius:10px;border:1.5px solid var(--border);cursor:pointer;background:#fff;transition:all .15s}
+.pay-item:hover{border-color:var(--border)}
+.pay-item.selected{border-color:var(--green);background:var(--gp);box-shadow:0 0 0 2px rgba(26,107,60,.1)}
+</style>
+<script>
+function selectPayment(el, student, course, method, amount, txid, merchant) {
+  document.querySelectorAll('.pay-item').forEach(i => i.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('d-student').innerHTML = '<span style="color:var(--muted)">শিক্ষার্থী:</span><span style="font-weight:600">'+student+'</span>';
+  document.getElementById('d-course').innerHTML = '<span style="color:var(--muted)">কোর্স:</span><span style="font-weight:600">'+course+'</span>';
+  document.getElementById('d-method').innerHTML = '<span style="color:var(--muted)">পদ্ধতি:</span><span style="font-weight:600">'+method+'</span>';
+  document.getElementById('d-amount').innerHTML = '<span style="color:var(--muted)">পরিমাণ:</span><span style="font-weight:700;color:var(--green)">'+amount+'</span>';
+  document.getElementById('d-txid').innerHTML = '<span style="color:var(--muted)">TrxID:</span><span style="font-weight:700;font-family:monospace">'+txid+'</span>';
+  document.getElementById('d-merchant').innerHTML = '<span style="color:var(--muted)">মার্চেন্ট নং:</span><span style="font-family:monospace">'+merchant+'</span>';
+}
+function approvePayment() {
+  alert('✅ পেমেন্ট অনুমোদিত হয়েছে!\n\nশিক্ষার্থীকে email পাঠানো হয়েছে।\nভর্তি এখন সক্রিয়।');
+}
+function rejectPayment() {
+  const reason = document.getElementById('reject-reason').value;
+  if(!reason.trim()) { alert('প্রত্যাখ্যানের কারণ লিখুন।'); return; }
+  alert('❌ পেমেন্ট প্রত্যাখ্যান করা হয়েছে।\n\nকারণ: '+reason+'\n\nশিক্ষার্থীকে email পাঠানো হয়েছে।');
+}
+</script>
+</body>
+</html>

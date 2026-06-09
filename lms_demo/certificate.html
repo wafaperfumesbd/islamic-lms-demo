@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>সার্টিফিকেট — Islamic LMS Demo</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="brand">🕌 Islamic LMS Demo</div>
+  <a href="index.html">হোমপেজ</a><a href="courses.html">কোর্স তালিকা</a>
+  <a href="course-detail.html">কোর্স বিবরণ</a><a href="lesson-player.html">লেসন প্লেয়ার</a>
+  <a href="student-dashboard.html">স্টুডেন্ট ড্যাশ</a><a href="payment.html">পেমেন্ট</a>
+  <a href="certificate.html" class="active">সার্টিফিকেট</a>
+  <a href="admin-dashboard.html">অ্যাডমিন ড্যাশ</a><a href="admin-payments.html">পেমেন্ট ভেরিফাই</a>
+  <a href="theme-customizer.html">থিম কাস্টমাইজার</a><a href="homepage-builder.html">হোমপেজ বিল্ডার</a>
+</nav>
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+    <div class="url-bar">https://madrasa-nooruislam.com/certificates</div>
+  </div>
+  <div style="background:var(--bg);padding:32px">
+    <div style="max-width:640px;margin:0 auto">
+      <div style="font-size:19px;font-weight:700;margin-bottom:4px">আমার সার্টিফিকেট 🏆</div>
+      <div style="font-size:12.5px;color:var(--muted);margin-bottom:22px">সম্পন্ন করা কোর্সের সার্টিফিকেটসমূহ</div>
+      <!-- Certificate -->
+      <div class="cert-box">
+        <div class="cert-wm" style="font-family:'Amiri',serif">بِسْمِ اللهِ</div>
+        <div style="position:relative">
+          <div style="font-size:10.5px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:7px">🕌 মাদ্রাসা নূরুল ইসলাম</div>
+          <div class="cert-header">সনদপত্র</div>
+          <div style="font-family:'Amiri',serif;font-size:14px;color:var(--gold);margin-bottom:14px;letter-spacing:1px">CERTIFICATE OF COMPLETION</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:5px">এই মর্মে প্রত্যয়ন করা যাচ্ছে যে,</div>
+          <div class="cert-name">মোহাম্মদ আব্দুল্লাহ</div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:16px">সফলভাবে সম্পন্ন করেছেন<br><strong style="color:var(--green);font-size:15px">তাজউইদ মাস্টারক্লাস</strong></div>
+          <div style="font-size:11.5px;color:var(--muted)">সম্পন্নের তারিখ: ১৫ জানুয়ারি ২০২৫ &nbsp;|&nbsp; শিক্ষাকাল: ৮ সপ্তাহ</div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:16px;padding-top:14px;border-top:1px solid rgba(184,134,11,.18)">
+            <div>
+              <div style="font-family:'Amiri',serif;font-size:17px;color:var(--text)">শায়েখ আব্দুর রহমান</div>
+              <div style="font-size:10px;color:var(--muted);border-top:.5px solid var(--muted);padding-top:3px;margin-top:3px">প্রধান শিক্ষক</div>
+            </div>
+            <div style="text-align:center">
+              <div style="width:52px;height:52px;background:var(--text);border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 4px">
+                <div style="width:40px;height:40px;background:repeating-linear-gradient(0deg,#fff 0,#fff 3px,transparent 3px,transparent 6px),repeating-linear-gradient(90deg,#fff 0,#fff 3px,transparent 3px,transparent 6px)"></div>
+              </div>
+              <div style="font-size:9px;color:var(--muted)">QR যাচাই</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-family:'DM Mono',monospace;font-size:9.5px;color:var(--muted)">সার্টিফিকেট নং</div>
+              <div style="font-family:'DM Mono',monospace;font-size:11.5px;font-weight:700">LMS-2025-0124</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:16px;justify-content:center">
+        <button onclick="alert('PDF ডাউনলোড শুরু হচ্ছে...')" class="btn btn-primary btn-sm">⬇️ PDF ডাউনলোড</button>
+        <button onclick="alert('লিংক কপি হয়েছে: https://madrasa-nooruislam.com/verify/LMS-2025-0124')" class="btn btn-ghost btn-sm">🔗 যাচাই লিংক কপি</button>
+        <a href="#" class="btn btn-ghost btn-sm">📘 Facebook শেয়ার</a>
+      </div>
+      <div style="text-align:center;font-size:11.5px;color:var(--muted);margin-top:10px">
+        যাচাই URL: <span style="font-family:'DM Mono',monospace;color:var(--blue)">https://madrasa-nooruislam.com/verify/LMS-2025-0124</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

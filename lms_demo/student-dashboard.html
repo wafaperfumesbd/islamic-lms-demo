@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>স্টুডেন্ট ড্যাশবোর্ড — Islamic LMS Demo</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="brand">🕌 Islamic LMS Demo</div>
+  <a href="index.html">হোমপেজ</a><a href="courses.html">কোর্স তালিকা</a>
+  <a href="course-detail.html">কোর্স বিবরণ</a><a href="lesson-player.html">লেসন প্লেয়ার</a>
+  <a href="student-dashboard.html" class="active">স্টুডেন্ট ড্যাশ</a>
+  <a href="payment.html">পেমেন্ট</a><a href="certificate.html">সার্টিফিকেট</a>
+  <a href="admin-dashboard.html">অ্যাডমিন ড্যাশ</a><a href="admin-payments.html">পেমেন্ট ভেরিফাই</a>
+  <a href="theme-customizer.html">থিম কাস্টমাইজার</a><a href="homepage-builder.html">হোমপেজ বিল্ডার</a>
+</nav>
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+    <div class="url-bar">https://madrasa-nooruislam.com/dashboard</div>
+  </div>
+  <div class="dash-wrap">
+    <div class="dash-sidebar">
+      <div class="dash-user">
+        <div class="dash-avatar">👤</div>
+        <div class="dash-name">মোহাম্মদ আব্দুল্লাহ</div>
+        <div class="dash-role">শিক্ষার্থী</div>
+      </div>
+      <a href="student-dashboard.html" class="dash-link active"><span>🏠</span> ড্যাশবোর্ড</a>
+      <a href="courses.html" class="dash-link"><span>📚</span> আমার কোর্সসমূহ</a>
+      <a href="#" class="dash-link"><span>🎥</span> লাইভ ক্লাস</a>
+      <a href="certificate.html" class="dash-link"><span>🏆</span> সার্টিফিকেট</a>
+      <a href="#" class="dash-link"><span>👤</span> প্রোফাইল</a>
+    </div>
+    <div class="dash-main">
+      <div style="font-size:17px;font-weight:700;margin-bottom:4px">স্বাগতম, আব্দুল্লাহ ভাই! 👋</div>
+      <div style="font-size:12.5px;color:var(--muted);margin-bottom:18px">আপনার শেখার যাত্রা অব্যাহত রাখুন।</div>
+      <div class="grid-4" style="margin-bottom:18px">
+        <div class="stat-card"><div class="stat-icon si-green">📚</div><div><div class="stat-val">৩</div><div class="stat-label">ভর্তি কোর্স</div></div></div>
+        <div class="stat-card"><div class="stat-icon si-gold">✅</div><div><div class="stat-val">১</div><div class="stat-label">সম্পন্ন কোর্স</div></div></div>
+        <div class="stat-card"><div class="stat-icon si-blue">🏆</div><div><div class="stat-val">১</div><div class="stat-label">সার্টিফিকেট</div></div></div>
+        <div class="stat-card"><div class="stat-icon si-green">📅</div><div><div class="stat-val">২</div><div class="stat-label">আসন্ন ক্লাস</div></div></div>
+      </div>
+      <div style="font-size:14px;font-weight:700;margin-bottom:10px">চলমান কোর্সসমূহ</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="card"><div class="card-body" style="display:flex;align-items:center;gap:14px;padding:14px">
+          <div class="ct ct-green" style="width:54px;height:54px;border-radius:10px;flex-shrink:0;font-size:24px">📖</div>
+          <div style="flex:1">
+            <div style="font-size:13.5px;font-weight:700;margin-bottom:4px">তাজউইদ মাস্টারক্লাস</div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div class="pb-wrap"><div class="pb-fill" style="width:35%"></div></div>
+              <span style="font-size:11.5px;font-weight:600;color:var(--green);white-space:nowrap">৩৫% সম্পন্ন</span>
+            </div>
+          </div>
+          <a href="lesson-player.html" class="btn btn-primary btn-sm">চালিয়ে যান →</a>
+        </div></div>
+        <div class="card"><div class="card-body" style="display:flex;align-items:center;gap:14px;padding:14px">
+          <div class="ct ct-gold" style="width:54px;height:54px;border-radius:10px;flex-shrink:0;font-size:24px">📖</div>
+          <div style="flex:1">
+            <div style="font-size:13.5px;font-weight:700;margin-bottom:4px">কথ্য আরবি — বেসিক</div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div class="pb-wrap"><div class="pb-fill" style="width:68%"></div></div>
+              <span style="font-size:11.5px;font-weight:600;color:var(--green);white-space:nowrap">৬৮% সম্পন্ন</span>
+            </div>
+          </div>
+          <a href="lesson-player.html" class="btn btn-primary btn-sm">চালিয়ে যান →</a>
+        </div></div>
+        <div class="card"><div class="card-body" style="display:flex;align-items:center;gap:14px;padding:14px">
+          <div class="ct ct-blue" style="width:54px;height:54px;border-radius:10px;flex-shrink:0;font-size:24px">📖</div>
+          <div style="flex:1">
+            <div style="font-size:13.5px;font-weight:700;margin-bottom:4px">ফিকহ পরিচিতি</div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div class="pb-wrap"><div class="pb-fill" style="width:12%"></div></div>
+              <span style="font-size:11.5px;font-weight:600;color:var(--green);white-space:nowrap">১২% সম্পন্ন</span>
+            </div>
+          </div>
+          <a href="lesson-player.html" class="btn btn-primary btn-sm">চালিয়ে যান →</a>
+        </div></div>
+      </div>
+      <!-- Live class -->
+      <div style="margin-top:16px">
+        <div style="font-size:14px;font-weight:700;margin-bottom:10px">আসন্ন লাইভ ক্লাস</div>
+        <div class="card"><div class="card-body" style="display:flex;align-items:center;gap:14px;padding:14px">
+          <div style="width:50px;height:50px;background:var(--gl);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0">
+            <div style="font-size:17px;font-weight:800;color:var(--green);line-height:1">১৫</div>
+            <div style="font-size:9.5px;color:var(--green2)">জানু</div>
+          </div>
+          <div style="flex:1">
+            <div style="font-size:13.5px;font-weight:700">মাখরাজ — প্রশ্নোত্তর পর্ব</div>
+            <div style="font-size:11.5px;color:var(--muted);margin-top:2px">🕐 রাত ৯:০০ টা • শায়েখ আব্দুর রহমান</div>
+          </div>
+          <a href="#" onclick="alert('Zoom-এ Join করুন: https://zoom.us/j/123456789')" class="btn btn-primary btn-sm">Join Zoom →</a>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

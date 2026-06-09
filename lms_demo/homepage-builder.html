@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>হোমপেজ বিল্ডার — Islamic LMS Demo</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="brand">🕌 Islamic LMS Demo</div>
+  <a href="index.html">হোমপেজ</a><a href="courses.html">কোর্স তালিকা</a>
+  <a href="course-detail.html">কোর্স বিবরণ</a><a href="lesson-player.html">লেসন প্লেয়ার</a>
+  <a href="student-dashboard.html">স্টুডেন্ট ড্যাশ</a><a href="payment.html">পেমেন্ট</a>
+  <a href="certificate.html">সার্টিফিকেট</a><a href="admin-dashboard.html">অ্যাডমিন ড্যাশ</a>
+  <a href="admin-payments.html">পেমেন্ট ভেরিফাই</a><a href="theme-customizer.html">থিম কাস্টমাইজার</a>
+  <a href="homepage-builder.html" class="active">হোমপেজ বিল্ডার</a>
+</nav>
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+    <div class="url-bar">https://madrasa-nooruislam.com/admin/settings/homepage</div>
+  </div>
+  <div class="admin-wrap">
+    <div class="admin-sidebar">
+      <div class="sb-brand"><div class="sb-brand-name">🕌 Admin Panel</div></div>
+      <a href="admin-dashboard.html" class="sb-link"><span>📊</span> ড্যাশবোর্ড</a>
+      <a href="theme-customizer.html" class="sb-link"><span>🎨</span> থিম সেটিংস</a>
+      <a href="#" class="sb-link"><span>⚙️</span> সাইট সেটিংস</a>
+      <a href="homepage-builder.html" class="sb-link active"><span>🏠</span> হোমপেজ বিল্ডার</a>
+      <a href="#" class="sb-link"><span>🔍</span> SEO সেটিংস</a>
+    </div>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div style="font-size:13.5px;font-weight:600">হোমপেজ বিল্ডার</div>
+        <div style="display:flex;gap:8px">
+          <a href="index.html" target="_blank" class="btn btn-ghost btn-sm">👁️ প্রিভিউ</a>
+          <button onclick="saveBlocks()" class="btn btn-primary btn-sm">✓ সংরক্ষণ করুন</button>
+        </div>
+      </div>
+      <div class="admin-content" style="padding:0">
+        <div style="display:grid;grid-template-columns:280px 1fr;min-height:460px">
+          <!-- Block list -->
+          <div style="background:#fff;border-right:.5px solid var(--border);padding:14px">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:10px">সেকশন অর্ডার (টেনে সাজান)</div>
+            <div id="blocks-list">
+              <div class="bb" draggable="true" data-id="hero" onclick="editBlock(this,'hero','হিরো ব্যানার')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">🦸</span>
+                <span style="flex:1;font-size:12px">হিরো ব্যানার</span>
+                <div class="toggle on" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="courses" onclick="editBlock(this,'courses','জনপ্রিয় কোর্স')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">📚</span>
+                <span style="flex:1;font-size:12px">জনপ্রিয় কোর্স</span>
+                <div class="toggle on" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="cats" onclick="editBlock(this,'cats','কোর্স ক্যাটাগরি')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">🏷️</span>
+                <span style="flex:1;font-size:12px">কোর্স ক্যাটাগরি</span>
+                <div class="toggle on" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="whyus" onclick="editBlock(this,'whyus','কেন আমরা')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">✨</span>
+                <span style="flex:1;font-size:12px">কেন আমরা</span>
+                <div class="toggle on" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="teachers" onclick="editBlock(this,'teachers','শিক্ষক শোকেস')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">👨‍🏫</span>
+                <span style="flex:1;font-size:12px">শিক্ষক শোকেস</span>
+                <div class="toggle on" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="testi" onclick="editBlock(this,'testi','শিক্ষার্থীর মতামত')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">💬</span>
+                <span style="flex:1;font-size:12px">শিক্ষার্থীর মতামত</span>
+                <div class="toggle on" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="stats" onclick="editBlock(this,'stats','পরিসংখ্যান')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">📊</span>
+                <span style="flex:1;font-size:12px">পরিসংখ্যান</span>
+                <div class="toggle off" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="cta" onclick="editBlock(this,'cta','কল টু অ্যাকশন')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">📣</span>
+                <span style="flex:1;font-size:12px">কল টু অ্যাকশন</span>
+                <div class="toggle on" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="newsletter" onclick="editBlock(this,'newsletter','নিউজলেটার')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">✉️</span>
+                <span style="flex:1;font-size:12px">নিউজলেটার</span>
+                <div class="toggle off" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+              <div class="bb" draggable="true" data-id="faq" onclick="editBlock(this,'faq','FAQ')">
+                <span style="color:var(--muted);font-size:13px">⠿</span>
+                <span style="font-size:13px">❓</span>
+                <span style="flex:1;font-size:12px">FAQ</span>
+                <div class="toggle off" onclick="event.stopPropagation();this.classList.toggle('on');this.classList.toggle('off')"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Edit panel -->
+          <div style="background:var(--bg);padding:16px">
+            <div id="edit-placeholder" style="text-align:center;padding:48px;color:var(--muted)">
+              <div style="font-size:36px;margin-bottom:12px">🏠</div>
+              <div style="font-size:13.5px;font-weight:600;margin-bottom:6px">সেকশন নির্বাচন করুন</div>
+              <div style="font-size:12px">বাম পাশ থেকে যেকোনো ব্লকে ক্লিক করে কন্টেন্ট এডিট করুন</div>
+            </div>
+            <div id="edit-panel" style="display:none">
+              <div style="background:#fff;border-radius:var(--r2);border:.5px solid var(--border);padding:18px">
+                <div id="edit-title" style="font-size:14px;font-weight:700;margin-bottom:16px;color:var(--green)">হিরো ব্যানার সম্পাদনা</div>
+                <div id="edit-fields"></div>
+                <button onclick="saveBlock()" class="btn btn-primary btn-sm" style="margin-top:12px">✓ সংরক্ষণ করুন</button>
+              </div>
+              <!-- Mini preview -->
+              <div style="margin-top:14px;background:#fff;border-radius:var(--r2);border:.5px solid var(--border);overflow:hidden">
+                <div style="padding:8px 12px;border-bottom:.5px solid var(--border);font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase">প্রিভিউ</div>
+                <div id="block-preview" style="padding:14px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const blockFields = {
+  hero: [
+    { label:'প্রধান শিরোনাম', id:'headline', val:'ইসলামিক শিক্ষায় দক্ষ হয়ে উঠুন' },
+    { label:'সাবটাইটেল', id:'subtext', val:'অনলাইনে ও সরাসরি ক্লাসের মাধ্যমে বিশ্বমানের ইসলামিক শিক্ষা', textarea:true },
+    { label:'CTA বাটনের লেখা', id:'cta_text', val:'কোর্স দেখুন' },
+    { label:'CTA লিংক', id:'cta_url', val:'/courses' },
+  ],
+  courses: [
+    { label:'সেকশন শিরোনাম', id:'heading', val:'জনপ্রিয় কোর্সসমূহ' },
+    { label:'দেখানোর সংখ্যা', id:'count', val:'৮' },
+  ],
+  cats: [
+    { label:'সেকশন শিরোনাম', id:'heading', val:'কোর্স ক্যাটাগরি' },
+  ],
+  whyus: [
+    { label:'সেকশন শিরোনাম', id:'heading', val:'কেন আমাদের বেছে নেবেন?' },
+    { label:'আইকন ১', id:'icon1', val:'🎓' },
+    { label:'বৈশিষ্ট্য ১ শিরোনাম', id:'feat1', val:'অভিজ্ঞ আলেম-শিক্ষক' },
+  ],
+  teachers: [
+    { label:'সেকশন শিরোনাম', id:'heading', val:'আমাদের শিক্ষকবৃন্দ' },
+  ],
+  testi: [
+    { label:'সেকশন শিরোনাম', id:'heading', val:'শিক্ষার্থীদের মতামত' },
+  ],
+  stats: [
+    { label:'স্ট্যাট ১ (শিক্ষার্থী)', id:'stat1', val:'১,২৪০+' },
+    { label:'স্ট্যাট ২ (কোর্স)', id:'stat2', val:'৪৮' },
+    { label:'স্ট্যাট ৩ (শিক্ষক)', id:'stat3', val:'১২' },
+  ],
+  cta: [
+    { label:'শিরোনাম', id:'heading', val:'আজই শুরু করুন' },
+    { label:'সাবটাইটেল', id:'subtext', val:'বিনামূল্যে নিবন্ধন করুন' },
+    { label:'বাটনের লেখা', id:'btn', val:'কোর্স দেখুন →' },
+  ],
+  newsletter: [
+    { label:'শিরোনাম', id:'heading', val:'আপডেট পান' },
+    { label:'সাবটাইটেল', id:'subtext', val:'নতুন কোর্স ও অফারের খবর পেতে সাবস্ক্রাইব করুন' },
+  ],
+  faq: [
+    { label:'প্রশ্ন ১', id:'q1', val:'কোর্স কীভাবে কিনব?' },
+    { label:'উত্তর ১', id:'a1', val:'bKash বা Nagad-এ পেমেন্ট করে TrxID দিলেই হবে।', textarea:true },
+  ],
+};
+
+const previews = {
+  hero: (fields) => `<div style="background:linear-gradient(135deg,#1A4B2E,#1A6B3C);padding:16px;text-align:center;color:#fff;border-radius:8px"><div style="font-size:14px;font-weight:800;margin-bottom:5px">${fields.headline||'শিরোনাম'}</div><div style="font-size:11px;opacity:.75;margin-bottom:10px">${(fields.subtext||'').slice(0,60)}...</div><button style="background:#B8860B;color:#fff;padding:5px 14px;border:none;border-radius:6px;font-size:11px;font-weight:700">${fields.cta_text||'শুরু করুন'}</button></div>`,
+  courses: (fields) => `<div style="padding:12px;background:var(--bg);border-radius:8px"><div style="font-size:13px;font-weight:700;margin-bottom:8px">${fields.heading||'কোর্স'}</div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">${['#1A6B3C','#B8860B','#1E3A8A','#0F5959'].map(c=>`<div style="height:36px;border-radius:6px;background:${c}"></div>`).join('')}</div></div>`,
+  cta: (fields) => `<div style="background:var(--green);padding:16px;text-align:center;color:#fff;border-radius:8px"><div style="font-size:14px;font-weight:800;margin-bottom:4px">${fields.heading||'CTA'}</div><div style="font-size:11px;opacity:.75;margin-bottom:8px">${fields.subtext||''}</div><button style="background:#fff;color:var(--green);padding:5px 14px;border:none;border-radius:6px;font-size:11px;font-weight:700">${fields.btn||'শুরু করুন'}</button></div>`,
+};
+
+let currentBlock = null;
+let fieldValues = {};
+
+function editBlock(el, id, title) {
+  document.querySelectorAll('.bb').forEach(b => b.style.borderColor = '');
+  el.style.borderColor = 'var(--green)';
+  currentBlock = id;
+  fieldValues = {};
+  document.getElementById('edit-placeholder').style.display = 'none';
+  document.getElementById('edit-panel').style.display = 'block';
+  document.getElementById('edit-title').textContent = title + ' সম্পাদনা';
+  const fields = blockFields[id] || [];
+  let html = '';
+  fields.forEach(f => {
+    fieldValues[f.id] = f.val;
+    html += `<div style="margin-bottom:12px"><label>${f.label}</label>`;
+    if(f.textarea) html += `<textarea onchange="fieldValues['${f.id}']=this.value;updatePreview()" style="min-height:60px">${f.val}</textarea>`;
+    else html += `<input type="text" value="${f.val}" onchange="fieldValues['${f.id}']=this.value;updatePreview()">`;
+    html += '</div>';
+  });
+  document.getElementById('edit-fields').innerHTML = html;
+  updatePreview();
+}
+
+function updatePreview() {
+  const pv = document.getElementById('block-preview');
+  const fn = previews[currentBlock];
+  if(fn) pv.innerHTML = fn(fieldValues);
+  else pv.innerHTML = '<div style="text-align:center;color:var(--muted);padding:20px;font-size:12px">এই ব্লকের প্রিভিউ উপলব্ধ</div>';
+}
+
+function saveBlock() { alert('✅ ব্লক সংরক্ষিত হয়েছে!'); }
+function saveBlocks() { alert('✅ হোমপেজ সংরক্ষিত হয়েছে!\n\nহোমপেজ দেখুন: index.html'); }
+
+// Drag to reorder
+let dragSrc = null;
+document.querySelectorAll('.bb').forEach(block => {
+  block.addEventListener('dragstart', function() { dragSrc = this; this.style.opacity = '.4'; });
+  block.addEventListener('dragend', function() { this.style.opacity = '1'; });
+  block.addEventListener('dragover', function(e) { e.preventDefault(); });
+  block.addEventListener('drop', function(e) {
+    e.preventDefault();
+    if(dragSrc && dragSrc !== this) {
+      const list = this.parentNode;
+      const all = [...list.querySelectorAll('.bb')];
+      const si = all.indexOf(dragSrc), ti = all.indexOf(this);
+      if(si < ti) list.insertBefore(dragSrc, this.nextSibling);
+      else list.insertBefore(dragSrc, this);
+    }
+  });
+});
+</script>
+</body>
+</html>

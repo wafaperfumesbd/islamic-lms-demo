@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>পেমেন্ট — Islamic LMS Demo</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="brand">🕌 Islamic LMS Demo</div>
+  <a href="index.html">হোমপেজ</a><a href="courses.html">কোর্স তালিকা</a>
+  <a href="course-detail.html">কোর্স বিবরণ</a><a href="lesson-player.html">লেসন প্লেয়ার</a>
+  <a href="student-dashboard.html">স্টুডেন্ট ড্যাশ</a>
+  <a href="payment.html" class="active">পেমেন্ট</a>
+  <a href="certificate.html">সার্টিফিকেট</a>
+  <a href="admin-dashboard.html">অ্যাডমিন ড্যাশ</a><a href="admin-payments.html">পেমেন্ট ভেরিফাই</a>
+  <a href="theme-customizer.html">থিম কাস্টমাইজার</a><a href="homepage-builder.html">হোমপেজ বিল্ডার</a>
+</nav>
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+    <div class="url-bar">https://madrasa-nooruislam.com/payment/tajweed-masterclass</div>
+  </div>
+  <div style="background:var(--bg);padding:32px;min-height:520px;display:flex;align-items:center;justify-content:center">
+    <div style="max-width:440px;width:100%;background:#fff;border-radius:var(--r2);border:.5px solid var(--border);overflow:hidden">
+      <!-- Header -->
+      <div style="background:var(--green);color:#fff;padding:18px 22px">
+        <div style="font-size:17px;font-weight:700">💳 পেমেন্ট করুন</div>
+        <div style="font-size:12px;opacity:.75;margin-top:2px">তাজউইদ মাস্টারক্লাস</div>
+      </div>
+      <!-- Course summary -->
+      <div style="padding:14px 22px;background:var(--gp);border-bottom:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-size:13px;font-weight:600">তাজউইদ মাস্টারক্লাস</div>
+          <div style="font-size:11px;color:var(--muted)">শায়েখ আব্দুর রহমান • ৪৫ পাঠ</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:18px;font-weight:800;color:var(--green)">৳৯৯৯</div>
+          <div style="font-size:11px;color:var(--muted);text-decoration:line-through">৳১,৪৯৯</div>
+        </div>
+      </div>
+      <!-- Method tabs -->
+      <div style="display:flex;border-bottom:.5px solid var(--border)">
+        <div id="tab-bkash" onclick="switchTab('bkash')" style="flex:1;padding:11px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;color:var(--green);border-bottom:2px solid var(--green)">💳 bKash</div>
+        <div id="tab-nagad" onclick="switchTab('nagad')" style="flex:1;padding:11px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent">📱 Nagad</div>
+        <div id="tab-bank" onclick="switchTab('bank')" style="flex:1;padding:11px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent">🏦 ব্যাংক</div>
+      </div>
+      <!-- bKash form -->
+      <div id="form-bkash" style="padding:22px">
+        <div class="bkash-box">
+          <div style="font-size:11.5px;color:var(--muted);margin-bottom:4px">নিচের bKash নম্বরে Send Money করুন:</div>
+          <div class="bkash-num">01812-345678</div>
+          <div style="font-size:10.5px;color:var(--muted);margin-top:4px">পরিমাণ: <strong>৳৯৯৯</strong></div>
+        </div>
+        <div style="margin-bottom:14px">
+          <label>Transaction ID (TrxID) *</label>
+          <input type="text" placeholder="যেমন: TrxA3F7K2" id="txid">
+        </div>
+        <div style="margin-bottom:14px">
+          <label>পেমেন্টের স্ক্রিনশট (ঐচ্ছিক)</label>
+          <div style="border:1.5px dashed var(--border);border-radius:8px;padding:18px;text-align:center;color:var(--muted);cursor:pointer;font-size:12.5px">📷 ছবি আপলোড করুন</div>
+        </div>
+        <button onclick="submitPayment()" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px;font-size:13.5px">পেমেন্ট জমা দিন →</button>
+        <div style="font-size:11px;color:var(--muted);text-align:center;margin-top:10px">পেমেন্ট যাচাইয়ের পর ২-৪ ঘণ্টার মধ্যে কোর্সে অ্যাক্সেস পাবেন।</div>
+      </div>
+      <!-- Nagad form -->
+      <div id="form-nagad" style="padding:22px;display:none">
+        <div style="background:#E8F5E9;border:1.5px solid #4CAF50;border-radius:9px;padding:14px;margin-bottom:14px;text-align:center">
+          <div style="font-size:11.5px;color:var(--muted);margin-bottom:4px">নিচের Nagad নম্বরে Send Money করুন:</div>
+          <div style="font-size:20px;font-weight:800;color:#2E7D32;letter-spacing:1px">01912-345678</div>
+          <div style="font-size:10.5px;color:var(--muted);margin-top:4px">পরিমাণ: <strong>৳৯৯৯</strong></div>
+        </div>
+        <div style="margin-bottom:14px">
+          <label>Transaction ID (TrxID) *</label>
+          <input type="text" placeholder="যেমন: NGD8X2K9">
+        </div>
+        <button onclick="submitPayment()" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px">পেমেন্ট জমা দিন →</button>
+      </div>
+      <!-- Bank form -->
+      <div id="form-bank" style="padding:22px;display:none">
+        <div style="background:var(--bluel);border:1.5px solid var(--blue);border-radius:9px;padding:14px;margin-bottom:14px">
+          <div style="font-size:12px;font-weight:700;color:var(--blue);margin-bottom:8px">ব্যাংক অ্যাকাউন্ট তথ্য:</div>
+          <div style="font-size:12px;color:var(--muted)">ব্যাংকের নাম: ইসলামী ব্যাংক বাংলাদেশ</div>
+          <div style="font-size:12px;color:var(--muted)">অ্যাকাউন্ট নম্বর: <strong style="font-family:'DM Mono',monospace">20501234567890</strong></div>
+          <div style="font-size:12px;color:var(--muted)">রাউটিং নম্বর: 125274507</div>
+          <div style="font-size:12px;color:var(--muted)">শাখা: চট্টগ্রাম প্রধান</div>
+        </div>
+        <div style="margin-bottom:14px">
+          <label>ট্রানজেকশন রেফারেন্স</label>
+          <input type="text" placeholder="Bank reference number">
+        </div>
+        <button onclick="submitPayment()" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px">পেমেন্ট জমা দিন →</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function switchTab(tab) {
+  ['bkash','nagad','bank'].forEach(t => {
+    document.getElementById('form-'+t).style.display = t===tab ? 'block' : 'none';
+    const el = document.getElementById('tab-'+t);
+    if(t===tab){ el.style.color='var(--green)'; el.style.borderBottom='2px solid var(--green)'; }
+    else { el.style.color='var(--muted)'; el.style.borderBottom='2px solid transparent'; }
+  });
+}
+function submitPayment() {
+  const txid = document.getElementById('txid');
+  if(txid && !txid.value.trim()) { alert('অনুগ্রহ করে Transaction ID দিন।'); return; }
+  alert('✅ পেমেন্ট জমা হয়েছে!\n\nআমরা শীঘ্রই যাচাই করব এবং আপনাকে email পাঠাব।\n\nসাধারণত ২-৪ ঘণ্টার মধ্যে কোর্সে অ্যাক্সেস পাবেন।');
+}
+</script>
+</body>
+</html>
