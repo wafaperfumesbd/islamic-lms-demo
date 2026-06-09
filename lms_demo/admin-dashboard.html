@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অ্যাডমিন ড্যাশবোর্ড — Islamic LMS Demo</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="top-nav">
+  <div class="brand">🕌 Islamic LMS Demo</div>
+  <a href="index.html">হোমপেজ</a><a href="courses.html">কোর্স তালিকা</a>
+  <a href="course-detail.html">কোর্স বিবরণ</a><a href="lesson-player.html">লেসন প্লেয়ার</a>
+  <a href="student-dashboard.html">স্টুডেন্ট ড্যাশ</a><a href="payment.html">পেমেন্ট</a>
+  <a href="certificate.html">সার্টিফিকেট</a>
+  <a href="admin-dashboard.html" class="active">অ্যাডমিন ড্যাশ</a>
+  <a href="admin-payments.html">পেমেন্ট ভেরিফাই</a>
+  <a href="theme-customizer.html">থিম কাস্টমাইজার</a><a href="homepage-builder.html">হোমপেজ বিল্ডার</a>
+</nav>
+<div class="browser">
+  <div class="browser-bar">
+    <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
+    <div class="url-bar">https://madrasa-nooruislam.com/admin</div>
+  </div>
+  <div class="admin-wrap">
+    <div class="admin-sidebar">
+      <div class="sb-brand"><div class="sb-brand-name">🕌 Admin Panel</div><div class="sb-brand-sub">মাদ্রাসা নূরুল ইসলাম</div></div>
+      <div class="sb-section">MAIN</div>
+      <a href="admin-dashboard.html" class="sb-link active"><span>📊</span> ড্যাশবোর্ড</a>
+      <a href="courses.html" class="sb-link"><span>📚</span> কোর্সসমূহ</a>
+      <a href="#" class="sb-link"><span>🏷️</span> ক্যাটাগরি</a>
+      <a href="#" class="sb-link"><span>👨‍🏫</span> শিক্ষকবৃন্দ</a>
+      <a href="#" class="sb-link"><span>👥</span> শিক্ষার্থী</a>
+      <a href="#" class="sb-link"><span>📋</span> ভর্তি <span class="sb-badge">৫</span></a>
+      <a href="admin-payments.html" class="sb-link"><span>💳</span> পেমেন্ট <span class="sb-badge">৩</span></a>
+      <a href="certificate.html" class="sb-link"><span>🏆</span> সার্টিফিকেট</a>
+      <a href="#" class="sb-link"><span>🎥</span> লাইভ ক্লাস</a>
+      <a href="#" class="sb-link"><span>📝</span> ব্লগ</a>
+      <div class="sb-section">SETTINGS</div>
+      <a href="theme-customizer.html" class="sb-link"><span>🎨</span> থিম সেটিংস</a>
+      <a href="#" class="sb-link"><span>⚙️</span> সাইট সেটিংস</a>
+      <a href="homepage-builder.html" class="sb-link"><span>🏠</span> হোমপেজ বিল্ডার</a>
+      <a href="#" class="sb-link"><span>🔍</span> SEO সেটিংস</a>
+    </div>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div style="font-size:13.5px;font-weight:600">সুপ্রভাত, Admin! 👋</div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:11.5px;color:var(--muted)">সোমবার, ৬ জানুয়ারি ২০২৫</span>
+          <div style="width:30px;height:30px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:13px">👤</div>
+        </div>
+      </div>
+      <div class="admin-content">
+        <div class="grid-4" style="margin-bottom:18px">
+          <div class="stat-card"><div class="stat-icon si-gold">💰</div><div><div class="stat-val">৳৮৪,৫০০</div><div class="stat-label">মোট আয়</div><div class="stat-change up">↑ ১২% এই মাসে</div></div></div>
+          <div class="stat-card"><div class="stat-icon si-green">👥</div><div><div class="stat-val">১,২৪০</div><div class="stat-label">মোট শিক্ষার্থী</div><div class="stat-change up">↑ ৪৫ এই সপ্তাহে</div></div></div>
+          <div class="stat-card"><div class="stat-icon si-blue">📚</div><div><div class="stat-val">৪৮</div><div class="stat-label">মোট কোর্স</div><div class="stat-change">৩টি ড্রাফট</div></div></div>
+          <div class="stat-card"><div class="stat-icon si-red">💳</div><div><div class="stat-val">৩</div><div class="stat-label">অপেক্ষমাণ পেমেন্ট</div><div class="stat-change down">তাড়াতাড়ি যাচাই করুন</div></div></div>
+        </div>
+        <div class="grid-2" style="gap:14px">
+          <div class="card"><div class="card-body">
+            <div style="font-size:13.5px;font-weight:700;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center">
+              সাম্প্রতিক পেমেন্ট
+              <a href="admin-payments.html" class="btn btn-ghost btn-sm">সব দেখুন →</a>
+            </div>
+            <table class="wf-table" style="font-size:12px">
+              <thead><tr><th>শিক্ষার্থী</th><th>কোর্স</th><th>পরিমাণ</th><th>অবস্থা</th></tr></thead>
+              <tbody>
+                <tr><td>রাহেলা বেগম</td><td>তাজউইদ</td><td style="font-weight:600;color:var(--green)">৳৯৯৯</td><td><span class="badge badge-gold" style="font-size:10px">অপেক্ষমাণ</span></td></tr>
+                <tr><td>ইমাম হোসেন</td><td>আরবি</td><td style="font-weight:600;color:var(--green)">৳৭৯৯</td><td><span class="badge badge-gold" style="font-size:10px">অপেক্ষমাণ</span></td></tr>
+                <tr><td>সালমা খানম</td><td>ফিকহ</td><td style="font-weight:600;color:var(--green)">৳৮৪৯</td><td><span class="badge badge-green" style="font-size:10px">অনুমোদিত</span></td></tr>
+                <tr><td>আব্দুর রহিম</td><td>কোরআন</td><td style="font-weight:600;color:var(--green)">বিনামূল্যে</td><td><span class="badge badge-green" style="font-size:10px">সক্রিয়</span></td></tr>
+              </tbody>
+            </table>
+          </div></div>
+          <div class="card"><div class="card-body">
+            <div style="font-size:13.5px;font-weight:700;margin-bottom:12px">দ্রুত অ্যাকশন</div>
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <a href="courses.html" class="btn btn-primary" style="justify-content:flex-start;font-size:12.5px">📚 নতুন কোর্স যোগ করুন</a>
+              <a href="#" class="btn btn-ghost" style="justify-content:flex-start;font-size:12.5px">👨‍🏫 নতুন শিক্ষক যোগ করুন</a>
+              <a href="#" class="btn btn-ghost" style="justify-content:flex-start;font-size:12.5px">🎥 লাইভ ক্লাস নির্ধারণ করুন</a>
+              <a href="admin-payments.html" class="btn btn-gold" style="justify-content:flex-start;font-size:12.5px">💳 পেমেন্ট যাচাই করুন (৩)</a>
+            </div>
+            <div style="margin-top:16px;padding-top:14px;border-top:.5px solid var(--border)">
+              <div style="font-size:12.5px;font-weight:700;margin-bottom:10px">এই সপ্তাহের লাইভ ক্লাস</div>
+              <div style="font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;padding:5px 0;border-bottom:.5px solid var(--border)">
+                <span>মাখরাজ — প্রশ্নোত্তর</span><span>১৫ জানু, রাত ৯টা</span>
+              </div>
+              <div style="font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;padding:5px 0">
+                <span>আরবি কথোপকথন</span><span>১৭ জানু, রাত ৮টা</span>
+              </div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
